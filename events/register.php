@@ -61,7 +61,7 @@ if (isset($_POST["register"])) {
 
   <script>
     $(function() {
-      $("#nav-placeholder").load("../components/nav-simple.php");
+      $("#nav-placeholder").load("../components/nav-simple.html");
     });
   </script>
   <!--end of Navigation bar-->

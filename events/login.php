@@ -32,7 +32,7 @@ if (isset($_POST["login"])) {
             $_SESSION["id"] = $id;
             $_SESSION["username"] = $firstname;
 
-            header("location: ../index.php");
+            header("location: ../index.html");
           } elseif ($row["usertype"] == "admin") {
             session_start();
 
@@ -81,7 +81,7 @@ if (isset($_POST["login"])) {
 
   <script>
     $(function() {
-      $("#nav-placeholder").load("../components/nav-simple.php");
+      $("#nav-placeholder").load("../components/nav-simple.html");
     });
   </script>
   <!--end of Navigation bar-->
