@@ -1,14 +1,14 @@
 <?php
 
 include "nav-admin.html";
-include_once "../components/db-config.php";
+include "../components/db-config.php";
 
 if (!isset($_SESSION["loggedin"]) or !isset($_SESSION["admin"])) {
   header("location: ../");
   exit();
 }
 
-if (isset($_POST["submit"]) and !empty($_GET["id"])) {
+if (isset($_POST["update"])) {
   // update data
   $id = $_POST["id"];
 
@@ -107,7 +107,7 @@ if (isset($_POST["submit"]) and !empty($_GET["id"])) {
                 </div>
               </div>
               <div class="row mb-3">
-                <input class="btn btn-danger rounded-pill" type="submit" name="register" value="Update">
+                <input class="btn btn-danger rounded-pill" type="submit" name="update" value="Update">
               </div>
             </form>
           </div>

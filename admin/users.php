@@ -21,13 +21,17 @@ if (!isset($_SESSION["loggedin"]) or !isset($_SESSION["admin"])) {
 
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/jquery.min.js"></script>
 </head>
 
 <body>
+
+  <div class="row m-2 p-2">
+    <h1>Users Information</h1>
+  </div>
 
   <div class="row m-2">
     <div class="card border-0">
