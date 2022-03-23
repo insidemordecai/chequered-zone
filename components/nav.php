@@ -34,10 +34,20 @@
               </li>
 
               <?php
-              session_start();
+              include "./db-config.php";
 
               if (isset($_SESSION["loggedin"])) {
                 $firstname = $_SESSION["username"];
+
+                if(isset($_SESSION["admin"])) {
+                  echo "
+                    <li class='nav-item'>
+                      <a class='nav-link' href='./admin/'>
+                        <span class='m-2'>Admin Panel</span>
+                      </a>
+                    </li>
+                  ";
+                }
 
                 echo "
                 <li class='nav-item'>
