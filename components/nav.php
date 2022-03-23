@@ -39,11 +39,11 @@
               if (isset($_SESSION["loggedin"])) {
                 $firstname = $_SESSION["username"];
 
-                if(isset($_SESSION["admin"])) {
+                if (isset($_SESSION["admin"])) {
                   echo "
                     <li class='nav-item'>
-                      <a class='nav-link' href='./admin/'>
-                        <span class='m-2'>Admin Panel</span>
+                      <a class='btn btn-light m-1' href='./admin/'>
+                        <span class='m-2'>Admin Home</span>
                       </a>
                     </li>
                   ";
@@ -51,24 +51,24 @@
 
                 echo "
                 <li class='nav-item'>
-                  <a class='nav-link' href='#'>
+                  <a class='btn btn-light m-1' href='#'>
                     <span class='m-2'>$firstname</span>
                   </a>
                 </li>
                 <li class='nav-item'>
-                  <a class='nav-link' href='./events/logout.php'>
+                  <a class='btn btn-light m-1' href='./events/logout.php'>
                     <span class='m-2'>Log Out</span>
                   </a>
                 </li>";
               } else {
                 echo "
                 <li class='nav-item'>
-                  <a class='nav-link' href='./events/login.php'>
+                  <a class='btn btn-light m-1' href='./events/login.php'>
                     <span class='m-2'>Login</span>
                   </a>
                 </li>
                 <li class='nav-item'>
-                  <a class='nav-link' href='./events/register.php'>
+                  <a class='btn btn-light m-1' href='./events/register.php'>
                     <span class='m-2'>Register</span>
                   </a>
                 </li>
