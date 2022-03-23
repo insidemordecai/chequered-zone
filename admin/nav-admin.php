@@ -1,5 +1,5 @@
 <?php
-include "../components/db-config.php";
+session_start();
 $firstname = $_SESSION["username"];
 ?>
 
@@ -21,6 +21,9 @@ $firstname = $_SESSION["username"];
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
+                <a class="btn m-1 text-white" href="./posts.php">Posts</a>
+              </li>
+              <li class="nav-item">
                 <a class="btn m-1 text-white" href="./users.php">Users</a>
               </li>
             </ul>
@@ -34,6 +37,7 @@ $firstname = $_SESSION["username"];
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+              <li><a class="dropdown-item" href="./">Admin Home</a></li>
               <li><a class="dropdown-item" href="../events/logout.php">Log Out</a></li>
             </ul>
           </div>

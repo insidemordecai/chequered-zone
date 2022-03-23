@@ -1,6 +1,6 @@
 <?php
 
-include "nav-admin.html";
+include "nav-admin.php";
 include "../components/db-config.php";
 
 if (!isset($_SESSION["loggedin"]) or !isset($_SESSION["admin"])) {
