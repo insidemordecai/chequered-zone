@@ -1,5 +1,6 @@
 <?php
 
+include "../components/nav-simple.html";
 include "../components/db-config.php";
 
 if (isset($_POST["login"])) {
@@ -75,16 +76,6 @@ if (isset($_POST["login"])) {
 </head>
 
 <body class="bg-white">
-
-  <!--Navigation bar-->
-  <div id="nav-placeholder"></div>
-
-  <script>
-    $(function() {
-      $("#nav-placeholder").load("../components/nav-simple.html");
-    });
-  </script>
-  <!--end of Navigation bar-->
 
   <div class="container-fluid p-4">
     <div class="card border-0">
