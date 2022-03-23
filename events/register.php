@@ -1,6 +1,6 @@
 <?php
 
-include "../components/config.php";
+include "../components/db-config.php";
 
 if (isset($_POST["register"])) {
 

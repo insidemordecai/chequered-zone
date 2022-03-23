@@ -1,6 +1,6 @@
 <?php
 
-include "../components/config.php";
+include "../components/db-config.php";
 
 if (isset($_POST["login"])) {
 
@@ -40,7 +40,7 @@ if (isset($_POST["login"])) {
             $_SESSION["id"] = $id;
             $_SESSION["username"] = $firstname;
 
-            header("location: admindashboard.php");
+            header("location: ../admin/");
           } else {
             echo "You have not been assigned a usertype. Contact Admin.";
           }
