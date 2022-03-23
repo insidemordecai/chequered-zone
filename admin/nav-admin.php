@@ -1,3 +1,8 @@
+<?php
+include "../components/db-config.php";
+$firstname = $_SESSION["username"];
+?>
+
 <div class="col-sm-12 col-lg-12 bg-light">
   <div class="row bg-danger">
     <div class="col-sm-3 col-lg-3">
@@ -16,13 +21,23 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="btn btn-light m-1" href="./">Admin Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-light m-1" href="./users.php">Users</a>
+                <a class="btn m-1 text-white" href="./users.php">Users</a>
               </li>
             </ul>
           </div>
+
+          <div class="dropdown">
+            <a class='btn btn-light m-1' href='#' role="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class='m-2'>
+                <?php echo $firstname; ?>
+              </span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+              <li><a class="dropdown-item" href="../events/logout.php">Log Out</a></li>
+            </ul>
+          </div>
+
         </div>
       </nav>
     </div>

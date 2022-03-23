@@ -1,3 +1,7 @@
+<?php
+include "./db-config.php";
+?>
+
 <div class="col-sm-12 col-lg-12 bg-light">
   <div class="row bg-danger">
     <div class="col-sm-3 col-lg-3">
@@ -32,50 +36,48 @@
                   <span class="m-2">Extreme E</span>
                 </a>
               </li>
-
-              <?php
-              include "./db-config.php";
-
-              if (isset($_SESSION["loggedin"])) {
-                $firstname = $_SESSION["username"];
-
-                if (isset($_SESSION["admin"])) {
-                  echo "
-                    <li class='nav-item'>
-                      <a class='btn btn-light m-1' href='./admin/'>
-                        <span class='m-2'>Admin Home</span>
-                      </a>
-                    </li>
-                  ";
-                }
-
-                echo "
-                <li class='nav-item'>
-                  <a class='btn btn-light m-1' href='#'>
-                    <span class='m-2'>$firstname</span>
-                  </a>
-                </li>
-                <li class='nav-item'>
-                  <a class='btn btn-light m-1' href='./events/logout.php'>
-                    <span class='m-2'>Log Out</span>
-                  </a>
-                </li>";
-              } else {
-                echo "
-                <li class='nav-item'>
-                  <a class='btn btn-light m-1' href='./events/login.php'>
-                    <span class='m-2'>Login</span>
-                  </a>
-                </li>
-                <li class='nav-item'>
-                  <a class='btn btn-light m-1' href='./events/register.php'>
-                    <span class='m-2'>Register</span>
-                  </a>
-                </li>
-                ";
-              }
-              ?>
             </ul>
+            <?php
+
+            if (isset($_SESSION["loggedin"])) {
+              $firstname = $_SESSION["username"];
+
+              if (isset($_SESSION["admin"])) { ?>
+                <div class="dropdown">
+                  <a class='btn btn-light m-1' href='#' role="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class='m-2'><?php echo $firstname; ?></span>
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                    <li><a class="dropdown-item" href="./admin/">Admin Home</a></li>
+                    <li><a class="dropdown-item" href="./events/logout.php">Log Out</a></li>
+                  </ul>
+                </div>
+
+              <?php } else { ?>
+                <div class="dropdown">
+                  <a class='btn btn-light m-1' href='#' role="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class='m-2'><?php echo $firstname; ?></span>
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                    <li><a class="dropdown-item" href="./events/logout.php">Log Out</a></li>
+                  </ul>
+                </div>
+              <?php }
+            } else { ?>
+              <div class="dropdown">
+                <a class='btn btn-light m-1' href='#' role="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class='m-2'>Login / Register</span>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                  <li><a class="dropdown-item" href="./events/login.php">Log In</a></li>
+                  <li><a class="dropdown-item" href="./events/register.php">Create Account</a></li>
+                </ul>
+              </div>
+            <?php }
+            ?>
           </div>
         </div>
       </nav>
