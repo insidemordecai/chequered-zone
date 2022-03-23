@@ -33,7 +33,7 @@ if (isset($_POST["login"])) {
             $_SESSION["id"] = $id;
             $_SESSION["username"] = $firstname;
 
-            header("location: ../index.html");
+            header("location: ../index.php");
           } elseif ($row["usertype"] == "admin") {
             session_start();
 
