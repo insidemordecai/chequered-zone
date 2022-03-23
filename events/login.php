@@ -27,6 +27,7 @@ if (isset($_POST["login"])) {
         if (password_verify($userPass, $password)) {
 
           if ($row["usertype"] == "fan") {
+            session_start();
 
             $_SESSION["loggedin"] = true;
             $_SESSION["id"] = $id;
@@ -34,6 +35,7 @@ if (isset($_POST["login"])) {
 
             header("location: ../index.html");
           } elseif ($row["usertype"] == "admin") {
+            session_start();
 
             $_SESSION["loggedin"] = true;
             $_SESSION["id"] = $id;
