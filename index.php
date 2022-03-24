@@ -103,8 +103,15 @@ session_start();
     <?php
     if (isset($_SESSION["loggedin"])) {
       include "posts.php";
-    }
-    ?>
+    } else { ?>
+      <div class="row m-2 p-4">
+        <div class="col-sm-12 col-lg-12">
+          <p class="display-4">Want extra motorsport content?
+            <a id="join-us-cta" class="text-danger text-decoration-none p-2 pt-0 pe-4" href="./events/login.php">Join Us</a>
+          </p>
+        </div>
+      </div>
+    <?php } ?>
   </div>
 
 </body>

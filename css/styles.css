@@ -9,3 +9,19 @@
   transform: scale(1.03);
   border-bottom: 1px solid #ff3545;
 }
+
+#join-us-cta {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#join-us-cta:hover {
+  border-bottom: 2px solid grey;
+  border-right: 2px solid grey;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1);
+}
+
+
