@@ -29,66 +29,73 @@ if (!isset($_SESSION["loggedin"]) or !isset($_SESSION["admin"])) {
 
 <body>
 
-  <div class="row m-2 p-2">
-    <h1>Users Information</h1>
-  </div>
+  <div class="container mt-5">
 
-  <div class="row m-2">
-    <div class="card border-0">
-      <div class="card-body">
+    <div class="row m-2 p-2">
+      <h1>Users Information</h1>
+    </div>
 
-        <?php
+    <div class="row m-2">
+      <div class="card border-0">
+        <div class="card-body">
 
-        $sql = "SELECT * FROM `users`";
-        $result = mysqli_query($link, $sql);
+          <?php
 
-        if ($result) {
-          $data = mysqli_num_rows($result);
+          $sql = "SELECT * FROM `users`";
+          $result = mysqli_query($link, $sql);
 
-          if ($data > 0) {
-            echo "<table class='table table-striped'>";
-            echo "<tr>";
-            echo "<th>ID</th>";
-            echo "<th>First Name</th>";
-            echo "<th>Second Name</th>";
-            echo "<th>Email</th>";
-            echo "<th>User Type</th>";
-            echo "<th>Edit Role</th>";
-            echo "</tr>";
+          if ($result) {
+            $data = mysqli_num_rows($result);
 
-            while ($row = mysqli_fetch_array($result)) {
-              echo "<tr>";
-              echo "<td>" . $row['id'] . "</td>";
-              echo "<td>" . $row['firstname'] . "</td>";
-              echo "<td>" . $row['secondname'] . "</td>";
-              echo "<td>" . $row['email'] . "</td>";
-              echo "<td>" . $row['usertype'] . "</td>";
-              echo "
-              <td>
-                <a class='btn btn-secondary' href='user-update.php?id=" . $row["id"] . "'>
-                  <i class='fa fa-pencil'></i>
-                </a>
-                <a class='btn btn-danger' href='user-delete.php?id=" . $row["id"] . "'>
-                  <i class='fa fa-trash'></i>
-                </a>
-              </td>
-              ";
-              echo "</tr>";
+            if ($data > 0) { ?>
+              <table class='table table-hover'>
+                <tr class="table-secondary">
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Second Name</th>
+                  <th>Email</th>
+                  <th>User Type</th>
+                  <th></th>
+                </tr>
+
+                <?php
+                while ($row = mysqli_fetch_array($result)) { ?>
+
+                  <tr>
+                    <td> <?php echo $row['id'] ?></td>
+                    <td> <?php echo $row['firstname'] ?></td>
+                    <td> <?php echo $row['secondname'] ?></td>
+                    <td> <?php echo $row['email'] ?></td>
+                    <td> <?php echo $row['usertype'] ?></td>
+
+                    <td>
+                      <a class='btn btn-secondary' href='user-update.php?id=<?php echo $row["id"] ?>'>
+                        <i class='fa fa-pencil'></i>
+                      </a>
+                      <a class='btn btn-danger' href='user-delete.php?id=<?php echo $row["id"] ?>'>
+                        <i class='fa fa-trash'></i>
+                      </a>
+                    </td>
+                  </tr>
+                <?php } ?>
+
+              </table>
+          <?php
+            } else {
+              echo "<p>No data was found</p>";
             }
-
-            echo "</table>";
           } else {
-            echo "<p>No data was found</p>";
+            echo "Error executing query $sql" . mysqli_error($link);
           }
-        } else {
-          echo "Error executing query $sql" . mysqli_error($link);
-        }
 
-        ?>
+          ?>
 
+        </div>
       </div>
     </div>
+
   </div>
+
 
 </body>
 
