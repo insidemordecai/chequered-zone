@@ -59,12 +59,13 @@ if (isset($_REQUEST['id'])) {
     <?php } ?>
 
     <?php foreach ($query as $q) { ?>
-      <div class="p-2 ps-0">
-        <img class="rounded" src="<?php echo $q['img'] ?>" alt="loading.." width="100%">
-      </div>
 
-      <div class="bg-white p-5 ps-0 pb-0 rounded-lg">
+      <div class="bg-white p-2 ps-0 rounded-lg">
         <h1><?php echo $q['title']; ?></h1>
+
+        <div class="p-2 ps-0">
+          <img class="rounded" src="<?php echo $q['img'] ?>" alt="loading.." width="100%">
+        </div>
 
         <?php
         if (isset($_SESSION['admin'])) { ?>
@@ -78,15 +79,9 @@ if (isset($_REQUEST['id'])) {
           </div>
         <?php } ?>
 
-        <div class="d-flex mt-2 justify-content-center align-items-center">
-          <form method="POST">
-            <input type="text" hidden value='<?php echo $q['id'] ?>' name="id">
-          </form>
-        </div>
-
       </div>
 
-      <p class="post-body mt-3 border-left border-dark pl-3"><?php echo nl2br($q['content']); ?></p>
+      <p class="post-body mt-4 pl-3"><?php echo nl2br($q['content']); ?></p>
     <?php } ?>
 
   </div>
