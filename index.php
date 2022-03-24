@@ -140,7 +140,7 @@ session_start();
       <div class="row m-2 p-4">
         <div class="col-sm-12 col-lg-12">
           <p class="display-4">Want extra motorsport content?
-            <a id="join-us-cta" class="text-danger text-decoration-none p-2 pt-0 pe-4" href="./events/login.php">Join Us</a>
+            <a id="join-us-cta" class="text-danger text-decoration-none p-2 pt-0 pe-4" href="./events/register.php">Join Us</a>
           </p>
         </div>
       </div>
