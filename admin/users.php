@@ -50,7 +50,6 @@ if (!isset($_SESSION["loggedin"]) or !isset($_SESSION["admin"])) {
             if ($data > 0) { ?>
               <table class='table table-hover'>
                 <tr class="table-secondary">
-                  <th>ID</th>
                   <th>First Name</th>
                   <th>Second Name</th>
                   <th>Email</th>
@@ -62,7 +61,7 @@ if (!isset($_SESSION["loggedin"]) or !isset($_SESSION["admin"])) {
                 while ($row = mysqli_fetch_array($result)) { ?>
 
                   <tr>
-                    <td> <?php echo $row['id'] ?></td>
+                    <td hidden> <?php echo $row['id'] ?></td>
                     <td> <?php echo $row['firstname'] ?></td>
                     <td> <?php echo $row['secondname'] ?></td>
                     <td> <?php echo $row['email'] ?></td>
