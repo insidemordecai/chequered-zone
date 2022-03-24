@@ -89,15 +89,12 @@ if (isset($_POST["register"])) {
                   <input class="form-control rounded-pill" type="password" name="confirmpass" placeholder="Confirm Password" required>
                 </div>
               </div>
-              <div class="row mb-3">
+              <div class="row mt-4 mb-4">
                 <input class="btn btn-danger rounded-pill" type="submit" name="register" value="Register">
               </div>
             </form>
-            <div class="m-2 p-2">
-              <hr>
-            </div>
             <div class="text-center">
-              <a href="login.php">Already have an account? Log in here</a>
+              <a class="text-decoration-none text-dark" href="login.php">Already have an account? <span class="text-danger"> Log in here</span></a>
             </div>
           </div>
         </div>

@@ -95,15 +95,13 @@ if (isset($_POST["login"])) {
               <div class="row mb-3">
                 <input class="form-control rounded-pill" type="password" name="password" placeholder="Password">
               </div>
-              <div class="row mb-3">
+              <div class="row mt-4 mb-4">
                 <input class="btn btn-danger rounded-pill" type="submit" name="login" value="Log In">
               </div>
             </form>
-            <div class="m-2 p-2">
-              <hr>
-            </div>
+
             <div class="text-center">
-              <a href="register.php">Don't have an account? Create one here</a>
+              <a class="text-decoration-none text-dark" href="register.php">Don't have an account? <span class="text-danger">Create one here</span></a>
             </div>
           </div>
         </div>
