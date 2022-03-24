@@ -37,11 +37,19 @@ session_start();
   <!-- articles -->
   <div class="row m-2 p-2">
     <div class="col-sm-5 col-lg-5">
-      <!-- one row/one card -->
+      <!-- main card -->
       <div class="card border-danger border-3 border-top-0 border-start-0 bg-light" style="width: 100%;">
-        <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/2022Races/SaudiArabainGP/GettyImages-1239355682.jpg.transform/9col/image.jpg" class="card-img-top" alt="...">
-        <h4 class="card-title m-2">Wolff admits Mercedes were ‘punching above their weight’ in Bahrain, as he calls 2022
-          title chances ‘a long shot’</h4>
+
+        <?php
+
+        $img = "https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/2022Races/SaudiArabainGP/GettyImages-1239355682.jpg.transform/9col/image.jpg";
+        $title = "Wolff admits Mercedes were ‘punching above their weight’ in Bahrain, as he calls 2022
+        title chances ‘a long shot’";
+
+        ?>
+
+        <img src="<?php echo $img; ?>" class="card-img-top" alt="...">
+        <h4 class="card-title m-2"> <?php echo $title; ?></h4>
         <div class="card-body">
           <p class="card-text">
             Mercedes Team Principal Toto Wolff watched his squad take their 265th podium finish at the Bahrain Grand
@@ -53,27 +61,40 @@ session_start();
             of the pack.
           </p>
           <p class="card-text"><small class="text-muted">Last updated 1 hr ago</small></p>
+          <a class="stretched-link" href="./pages/demo.php?title=<?php echo $title; ?>&img=<?php echo $img; ?>"></a>
         </div>
       </div>
     </div>
     <div class="col-sm-7 col-lg-7">
-      <!-- two rows with two cards each -->
+      <!-- other articles cards -->
       <div class="row">
         <div class="card-group">
           <div class="card m-2">
-            <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/BAH22F1-Tech-Tuesday.jpg.transform/9col/image.jpg" class="card-img-top" alt="...">
+            <?php
+            $img = "https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/BAH22F1-Tech-Tuesday.jpg.transform/9col/image.jpg";
+            $title = "The power unit gains behind Ferrari's Bahrain Grand Prix 1-2";
+            ?>
+
+            <img src="<?php echo $img; ?>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">The power unit gains behind Ferrari's Bahrain Grand Prix 1-2</h5>
+              <h5 class="card-title"><?php echo $title; ?></h5>
               <p class="card-text">In Bahrain, Ferrari sealed one-two and victory with their brand-new F1-75...</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <a class="stretched-link" href="./pages/demo.php?title=<?php echo $title; ?>&img=<?php echo $img; ?>"></a>
             </div>
           </div>
           <div class="card m-2">
-            <img src="https://www.wrc.com/images/redaktion/Season-2022-News/WRC/January/260122_-World-SebOgierSebLoeb-MonteCarlo-2022_001_aa8c1_f_1400x788.jpg" class="card-img-top" alt="...">
+            <?php
+            $img = "https://www.wrc.com/images/redaktion/Season-2022-News/WRC/January/260122_-World-SebOgierSebLoeb-MonteCarlo-2022_001_aa8c1_f_1400x788.jpg";
+            $title = "Ogier’s Accolade For Monte Winner Loeb";
+            ?>
+
+            <img src="<?php echo $img; ?>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Ogier’s Accolade For Monte Winner Loeb</h5>
+              <h5 class="card-title"><?php echo $title; ?></h5>
               <p class="card-text">Sébastien Ogier paid tribute to his countryman and rival...</p>
               <p class="card-text"><small class="text-muted">Last updated 15 mins ago</small></p>
+              <a class="stretched-link" href="./pages/demo.php?title=<?php echo $title; ?>&img=<?php echo $img; ?>"></a>
             </div>
           </div>
         </div>
@@ -82,15 +103,27 @@ session_start();
       <div class="row">
         <div class="card-group">
           <div class="card m-2">
-            <img src="https://cdn-1.motorsport.com/images/mgl/0qXVZd46/s8/laia-sanz-carlos-sainz-sainz-x-1.jpg" class="card-img-top" alt="...">
+            <?php
+            $img = "https://cdn-1.motorsport.com/images/mgl/0qXVZd46/s8/laia-sanz-carlos-sainz-sainz-x-1.jpg";
+            $title = "Desert X-Prix: Rosberg X Racing triumphs";
+            ?>
+
+            <img src="<?php echo $img; ?>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Desert X-Prix: Rosberg X Racing triumphs</h5>
+              <h5 class="card-title"><?php echo $title; ?></h5>
+              <a class="stretched-link" href="./pages/demo.php?title=<?php echo $title; ?>&img=<?php echo $img; ?>"></a>
             </div>
           </div>
           <div class="card m-2">
-            <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/GettyImages-1386705997.jpg.transform/9col/image.jpg" class="card-img-top" alt="...">
+            <?php
+            $img = "https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/GettyImages-1386705997.jpg.transform/9col/image.jpg";
+            $title = "Red Bull are still favourites say Ferrari, despite winning start in Bahrain";
+            ?>
+
+            <img src="<?php echo $img; ?>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Red Bull are still favourites say Ferrari, despite winning start in Bahrain</h5>
+              <h5 class="card-title"><?php echo $title; ?></h5>
+              <a class="stretched-link" href="./pages/demo.php?title=<?php echo $title; ?>&img=<?php echo $img; ?>"></a>
             </div>
           </div>
         </div>
@@ -99,7 +132,7 @@ session_start();
   </div>
 
   <!-- extra article for signed in users -->
-  <div class="row">
+  <div class="row m-0">
     <?php
     if (isset($_SESSION["loggedin"])) {
       include "posts.php";
