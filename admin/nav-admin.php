@@ -26,6 +26,9 @@ $firstname = $_SESSION["username"];
               <li class="nav-item">
                 <a class="btn m-1 text-white" href="./users.php">Users</a>
               </li>
+              <li class="nav-item">
+                <a class="btn m-1 text-white" href="./feedback.php">Feedback</a>
+              </li>
             </ul>
           </div>
 
