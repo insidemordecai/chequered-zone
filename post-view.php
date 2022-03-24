@@ -47,11 +47,36 @@ if (isset($_REQUEST['id'])) {
   </script>
   <!--end of Navigation bar-->
 
-  <div class="container mt-5">
+  <div class="post container mt-5">
+
+    <!-- Display info -->
+    <?php if (isset($_REQUEST['info'])) { ?>
+      <?php if ($_REQUEST['info'] == "updated") { ?>
+        <div class="alert alert-success" role="alert">
+          Post has been updated successfully
+        </div>
+      <?php } ?>
+    <?php } ?>
 
     <?php foreach ($query as $q) { ?>
-      <div class="bg-dark p-5 rounded-lg text-white text-center">
+      <div class="p-2 ps-0">
+        <img class="rounded" src="<?php echo $q['img'] ?>" alt="loading.." width="100%">
+      </div>
+
+      <div class="bg-white p-5 ps-0 pb-0 rounded-lg">
         <h1><?php echo $q['title']; ?></h1>
+
+        <?php
+        if (isset($_SESSION['admin'])) { ?>
+          <div class="d-flex mt-3 align-items-center">
+            <a href="./admin/post-edit.php?id=<?php echo $q['id'] ?>" class="btn btn-secondary me-2" name="edit">Edit</a>
+            <a href="./admin/post-delete.php?id=<?php echo $q['id'] ?>" class="btn btn-danger ml-2" name="delete">Delete</a>
+
+            <form method="POST">
+              <input type="text" hidden value='<?php echo $q['id'] ?>' name="id">
+            </form>
+          </div>
+        <?php } ?>
 
         <div class="d-flex mt-2 justify-content-center align-items-center">
           <form method="POST">
@@ -60,7 +85,8 @@ if (isset($_REQUEST['id'])) {
         </div>
 
       </div>
-      <p class="mt-5 border-left border-dark pl-3"><?php echo nl2br($q['content']); ?></p>
+
+      <p class="post-body mt-3 border-left border-dark pl-3"><?php echo nl2br($q['content']); ?></p>
     <?php } ?>
 
   </div>

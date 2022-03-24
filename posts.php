@@ -40,10 +40,13 @@ $query = mysqli_query($link, $sql);
       <?php foreach ($query as $q) { ?>
         <div class="col-12 col-lg-3 d-flex justify-content-center">
           <div class="card m-2" style="width: 18rem;">
+            <img src="<?php echo $q['img'] ?>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><?php echo $q['title']; ?></h5>
-              <p class="card-text"><?php echo substr($q['content'], 0, 50); ?>...</p>
-              <a href="posts-view.php?id=<?php echo $q['id'] ?>" class="btn btn-secondary">Read More</a>
+              <p class="card-text"><?php echo substr($q['content'], 0, 70); ?>...</p>
+              <a href="post-view.php?id=<?php echo $q['id'] ?>" class="stretched-link text-decoration-none text-danger">
+                read more <span>&#8250;
+              </a>
             </div>
           </div>
         </div>
