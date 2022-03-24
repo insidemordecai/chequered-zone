@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +28,7 @@
   <div id="nav-placeholder"></div>
 
   <script>
-    $(function () {
+    $(function() {
       $("#nav-placeholder").load("./components/nav.php");
     });
   </script>
@@ -33,9 +39,7 @@
     <div class="col-sm-5 col-lg-5">
       <!-- one row/one card -->
       <div class="card border-danger border-3 border-top-0 border-start-0 bg-light" style="width: 100%;">
-        <img
-          src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/2022Races/SaudiArabainGP/GettyImages-1239355682.jpg.transform/9col/image.jpg"
-          class="card-img-top" alt="...">
+        <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/2022Races/SaudiArabainGP/GettyImages-1239355682.jpg.transform/9col/image.jpg" class="card-img-top" alt="...">
         <h4 class="card-title m-2">Wolff admits Mercedes were ‘punching above their weight’ in Bahrain, as he calls 2022
           title chances ‘a long shot’</h4>
         <div class="card-body">
@@ -57,9 +61,7 @@
       <div class="row">
         <div class="card-group">
           <div class="card m-2">
-            <img
-              src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/BAH22F1-Tech-Tuesday.jpg.transform/9col/image.jpg"
-              class="card-img-top" alt="...">
+            <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/BAH22F1-Tech-Tuesday.jpg.transform/9col/image.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">The power unit gains behind Ferrari's Bahrain Grand Prix 1-2</h5>
               <p class="card-text">In Bahrain, Ferrari sealed one-two and victory with their brand-new F1-75...</p>
@@ -67,9 +69,7 @@
             </div>
           </div>
           <div class="card m-2">
-            <img
-              src="https://www.wrc.com/images/redaktion/Season-2022-News/WRC/January/260122_-World-SebOgierSebLoeb-MonteCarlo-2022_001_aa8c1_f_1400x788.jpg"
-              class="card-img-top" alt="...">
+            <img src="https://www.wrc.com/images/redaktion/Season-2022-News/WRC/January/260122_-World-SebOgierSebLoeb-MonteCarlo-2022_001_aa8c1_f_1400x788.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Ogier’s Accolade For Monte Winner Loeb</h5>
               <p class="card-text">Sébastien Ogier paid tribute to his countryman and rival...</p>
@@ -82,16 +82,13 @@
       <div class="row">
         <div class="card-group">
           <div class="card m-2">
-            <img src="https://cdn-1.motorsport.com/images/mgl/0qXVZd46/s8/laia-sanz-carlos-sainz-sainz-x-1.jpg"
-              class="card-img-top" alt="...">
+            <img src="https://cdn-1.motorsport.com/images/mgl/0qXVZd46/s8/laia-sanz-carlos-sainz-sainz-x-1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Desert X-Prix: Rosberg X Racing triumphs</h5>
             </div>
           </div>
           <div class="card m-2">
-            <img
-              src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/GettyImages-1386705997.jpg.transform/9col/image.jpg"
-              class="card-img-top" alt="...">
+            <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/GettyImages-1386705997.jpg.transform/9col/image.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Red Bull are still favourites say Ferrari, despite winning start in Bahrain</h5>
             </div>
@@ -102,6 +99,13 @@
   </div>
 
   <!-- extra article for signed in users -->
+  <div class="row">
+    <?php
+    if (isset($_SESSION["loggedin"])) {
+      include "posts.php";
+    }
+    ?>
+  </div>
 
 </body>
 

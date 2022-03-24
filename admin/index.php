@@ -54,11 +54,11 @@ if (isset($_REQUEST['new_post'])) {
     <?php } ?>
 
     <form method="POST">
-      <input type="text" placeholder="Blog Title" class="form-control my-3 bg-light text-center" name="title">
-      <textarea name="content" class="form-control my-3 bg-light" cols="30" rows="10"></textarea>
+      <input type="text" placeholder="Blog Title" class="form-control my-3 bg-light text-center" name="title" required>
+      <textarea name="content" class="form-control my-3 bg-light" cols="30" rows="10" required></textarea>
       <button class="btn btn-danger" name="new_post">Add Post</button>
     </form>
-    
+
   </div>
 
 </body>

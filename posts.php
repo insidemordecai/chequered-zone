@@ -1,7 +1,6 @@
 <?php
 
-include "nav-admin.php";
-include "../components/db-config.php";
+include "./components/db-config.php";
 
 if (!isset($_SESSION["loggedin"])) {
   header("location: ../");
@@ -44,7 +43,7 @@ $query = mysqli_query($link, $sql);
             <div class="card-body">
               <h5 class="card-title"><?php echo $q['title']; ?></h5>
               <p class="card-text"><?php echo substr($q['content'], 0, 50); ?>...</p>
-              <a href="view.php?id=<?php echo $q['id'] ?>" class="btn btn-secondary">Read More <span class="text-danger">&rarr;</span></a>
+              <a href="posts-view.php?id=<?php echo $q['id'] ?>" class="btn btn-secondary">Read More</a>
             </div>
           </div>
         </div>
