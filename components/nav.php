@@ -4,11 +4,11 @@ include "./db-config.php";
 ?>
 
 <div class="col-sm-12 col-lg-12 bg-light">
-  <div class="row bg-danger">
-    <div class="col-sm-3 col-lg-3">
+  <div class="row bg-danger m-0">
+    <div class=" col-sm-3 col-lg-3">
       <nav class="navbar">
         <div class="container-fluid">
-          <form class="d-flex">
+          <form class="d-flex m-0">
             <a class="navbar-brand text-white" href="index.php">Chequered Zone</a>
           </form>
         </div>
@@ -22,21 +22,16 @@ include "./db-config.php";
             <ul class="navbar-nav">
 
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                  <span class="m-2">F1</span>
+                <a class="nav-link text-white" href="./pages/about.php">
+                  <span class="m-2">About</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                  <span class="m-2">WRC</span>
+                <a class="nav-link text-white" href="./pages/contact.php">
+                  <span class="m-2">Contact</span>
                 </a>
               </li>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                  <span class="m-2">Extreme E</span>
-                </a>
-              </li>
+
             </ul>
             <?php
 

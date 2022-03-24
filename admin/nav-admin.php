@@ -4,7 +4,7 @@ $firstname = $_SESSION["username"];
 ?>
 
 <div class="col-sm-12 col-lg-12 bg-light">
-  <div class="row bg-danger">
+  <div class="row bg-danger m-0">
     <div class="col-sm-3 col-lg-3">
       <nav class="navbar">
         <div class="container-fluid">
@@ -21,7 +21,7 @@ $firstname = $_SESSION["username"];
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="btn m-1 text-white" href="./posts.php">Posts</a>
+                <a class="btn m-1 text-white" href="./">Admin Home</a>
               </li>
               <li class="nav-item">
                 <a class="btn m-1 text-white" href="./users.php">Users</a>
@@ -37,7 +37,6 @@ $firstname = $_SESSION["username"];
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="adminDropdown">
-              <li><a class="dropdown-item" href="./">Admin Home</a></li>
               <li><a class="dropdown-item" href="../events/logout.php">Log Out</a></li>
             </ul>
           </div>
