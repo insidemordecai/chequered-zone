@@ -8,9 +8,6 @@ In the extra articles, if a user is an admin they get the option to edit it or d
 
 ### SQL table structure
 
-The project makes use of three tables. 
+The project makes use of three tables - contact (for data from contact form), posts (to keep articles) and users. 
 
-To clone and reproduce this project's functionalities, the table structure is as follows:
-
-**TODO:**
-- [ ] Add images showing table structure
+To clone and reproduce this project's functionalities, the project sql file is included in the root folder. Import into phpMyAdmin. Default password for all users is 123456
