@@ -10,4 +10,4 @@ In the extra articles, if a user is an admin they get the option to edit it or d
 
 The project makes use of three tables - contact (for data from contact form), posts (to keep articles) and users. 
 
-To clone and reproduce this project's functionalities, the project sql file is included in the root folder. Import into phpMyAdmin. Default password for all users is 123456
+To clone and reproduce this project's functionalities, the project sql file `chequered-zone.sql` is included in the root folder. Import into phpMyAdmin. Default password for all users is `123456`
