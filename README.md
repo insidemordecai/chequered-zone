@@ -10,4 +10,13 @@ In the extra articles, if a user is an admin they get the option to edit it or d
 
 The project makes use of three tables - contact (for data from contact form), posts (to keep articles) and users. 
 
-To clone and reproduce this project's functionalities, the project sql file `chequered-zone.sql` is included in the root folder. Import into phpMyAdmin. Default password for all users is `123456`
+### Working with the project 
+
+To clone and reproduce this project's functionalities, the project sql file `chequered-zone.sql` is included in the root folder. Import into phpMyAdmin or alternatives.
+
+Default password for all users is `123456` 
+
+The admin is `Jack Bauer` with email as `jbauer@gmail.com` <br>
+An example of a non-admin user is `Ayrton Senna` with email as `asenna@gmail.com` <br>
+
+All new users will be fans by default without administrative privileges.
