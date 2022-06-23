@@ -2,6 +2,8 @@
 
 This a news website (showcase) that one can views motorsport content in one place
 
+<img src="https://github.com/insidemordecai/chequered-zone/blob/main/screen-captures/chequered-zone-demo.gif?raw=true" width="70%" />
+
 Prior to logging in, a user has access to limited amount of content but on they can register a new account or log into an existing account to view the extra content. If the user is an admin they can add new articles, view other users and update/delete their information as well as view feedback from the contact form and delete them.
 
 In the extra articles, if a user is an admin they get the option to edit it or delete it. These two button are hidden from a normal user (fan)
