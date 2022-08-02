@@ -6,14 +6,14 @@ This a news website (showcase) that one can view motorsport content in one place
 
 Prior to logging in, a user has access to a limited amount of content but they can register a new account or log into an existing account to view the extra content. If the user is an admin they can add new articles, view other users and manipulate their information as well as view feedback from the contact form and delete them.
 
-In the extra articles, if a user is an admin they get the option to edit it or delete it. These two button are hidden from a normal user (fan)
+In the extra articles section, an admin gets the option to edit or delete the article. These two button are hidden from a normal user (fan)
 
 ### Working with the project 
 #### SQL table structure
 
-The project makes use of three tables - contact (for data from contact form), posts (to keep articles) and users. 
+The project makes use of three tables - contact (form data storage), posts (articles storage) and users. 
 
-To clone and reproduce this project's functionalities, the project sql file `chequered-zone.sql` is included in the root folder. Import into phpMyAdmin or alternatives.
+To clone and reproduce this project's functionalities, the project backup file `chequered-zone.sql` is included in the root folder. Import into phpMyAdmin or alternatives.
 
 #### Users
 
